@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-pastel-bg: #FAFAF7;
+  --color-pastel-surface: #FFFFFF;
+  --color-pastel-lavender: #EAE4F8;
+  --color-pastel-blue: #DDEBF7;
+  --color-pastel-mint: #DDF2E8;
+  --color-pastel-peach: #FBE4D5;
+  --color-pastel-yellow: #F8F0CF;
+  --color-pastel-coral: #FCE4E4;
+  
+  --color-status-normal-bg: #E3F3E8;
+  --color-status-normal-text: #2B6B46;
+  --color-status-warning-bg: #FFF3D6;
+  --color-status-warning-text: #8A6517;
+  --color-status-abnormal-bg: #FCE4E4;
+  --color-status-abnormal-text: #A13838;
+
+  --color-text-primary: #29313D;
+  --color-text-secondary: #6F7782;
+
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-pastel-bg text-text-primary font-sans antialiased selection:bg-pastel-lavender selection:text-text-primary;
+  }
+}
